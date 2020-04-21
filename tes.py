@@ -64,7 +64,7 @@ def donat():
                 us = open('vip_id.txt', mode='a', encoding='utf-8')
                 us.write(str(payment.comment) + '\n')
                 bot.send_message(payment.comment,
-                                 "Спасибо за покупку, напишите /start\n\n<b>Удачно пользования, и не шалите!</b>",
+                                 "Спасибо за покупку, напишите /start\n\n<b>Удачно пользования, и не шалите!!</b>",
                                  parse_mode='HTML')
         else:
             pass
