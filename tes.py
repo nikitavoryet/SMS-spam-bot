@@ -16,12 +16,12 @@ import os
 ua = UserAgent()
 
 banner = """
-@marjsudo
+@qwerty #banner
 """
 
 ################################################
-qiwi_token = '833495641b4b5dab5936465abac990b6'
-qiwi_phone = '89234285763'
+qiwi_token = '' # u token qiwi
+qiwi_phone = '' # u phone for pay
 price = '100'
 
 
@@ -200,17 +200,17 @@ def start(m):
         keyboard.add(button1)
         keyboard.add(button3)
         keyboard.add(adminka)
-        bot.send_message(m.chat.id, f'Флудер нового поколения - @marjsudo', reply_markup=keyboard, parse_mode='HTML')
+        bot.send_message(m.chat.id, f'Флудер нового поколения - @qwerty', reply_markup=keyboard, parse_mode='HTML')
 
     elif str(m.chat.id) in open('vip_id.txt').read():
         keyboard.add(button1)
         keyboard.add(button3)
-        bot.send_message(m.chat.id, f'Флудер нового поколения - @marjsudo', reply_markup=keyboard, parse_mode='HTML')
+        bot.send_message(m.chat.id, f'Флудер нового поколения - @qwerty', reply_markup=keyboard, parse_mode='HTML')
     else:
         keyboard = types.InlineKeyboardMarkup()
         button5 = types.InlineKeyboardButton(text="Получить доступ", callback_data="button5")
         keyboard.add(button5)
-        bot.send_message(m.chat.id, 'Флудер нового поколения - @marjsudo', reply_markup=keyboard, parse_mode='HTML')
+        bot.send_message(m.chat.id, 'Флудер нового поколения - @qwerty', reply_markup=keyboard, parse_mode='HTML')
 
 
 def start_spam(chat_id, phone_number, force):
@@ -1026,7 +1026,7 @@ def spam_handler(phone, chat_id, force):
             x.start()
         else:
             bot.send_message(chat_id,
-                             "Данный номер телефона находится в Белом листе. Вы не сможете отправить на него спам. Попробуйте другой номер.\n\nУбрать номер со списка, возможно - через @marjsudo")
+                             "Данный номер телефона находится в Белом листе. Вы не сможете отправить на него спам. Попробуйте другой номер.\n\nУбрать номер со списка, возможно - через @qwerty")
     else:
         bot.send_message(chat_id, 'Сервера сейчас перегружены. Попытайтесь снова через несколько минут!')
         print('Максимальное количество тредов исполняется. Действие отменено!')
@@ -1064,18 +1064,18 @@ def callback_inline(call):
         keyboard.add(button1)
         keyboard.add(button3)
         keyboard.add(adminka)
-        bot.send_message(message.chat.id, f'Флудер нового поколения - @marjsudo', reply_markup=keyboard, parse_mode='HTML')
+        bot.send_message(message.chat.id, f'Флудер нового поколения - @qwerty', reply_markup=keyboard, parse_mode='HTML')
 
     elif str(message.chat.id) in open('vip_id.txt').read():
         keyboard.add(button1)
         keyboard.add(button3)
-        bot.send_message(message.chat.id, f'Флудер нового поколения - @marjsudo', reply_markup=keyboard, parse_mode='HTML')
+        bot.send_message(message.chat.id, f'Флудер нового поколения - @qwerty', reply_markup=keyboard, parse_mode='HTML')
 
     else:
         keyboard = types.InlineKeyboardMarkup()
         button5 = types.InlineKeyboardButton(text="Получить доступ", callback_data="button5")
         keyboard.add(button5)
-        bot.send_message(message.chat.id, 'Флудер нового поколения - @marjsudo', reply_markup=keyboard, parse_mode='HTML')
+        bot.send_message(message.chat.id, 'Флудер нового поколения - @qwerty', reply_markup=keyboard, parse_mode='HTML')
     ##########################################################################################
     if call.message:
         if call.data == "button1":
@@ -1166,7 +1166,7 @@ def callback_inline(call):
         elif call.data == "button5":
             bot.send_message(message.chat.id, '❗️ Для приобретения доступа к боту переведите ' + str(
                 price) + ' рублей на QIWI кошелёк любым способом.\n\n📱Номер телефона: ' + '<pre>' + qiwi_phone + '</pre> \n👑Комментарий: ' '<pre>' + str(
-                message.chat.id) + '</pre> \n\nЕсли Вы перевели деньги с другим комментариями, то доступ вы не получите!\nПосле пополнения баланса введите /start\n\n<b>При ошибочном переводе писать @marjsudo</b>',
+                message.chat.id) + '</pre> \n\nЕсли Вы перевели деньги с другим комментариями, то доступ вы не получите!\nПосле пополнения баланса введите /start\n\n<b>При ошибочном переводе писать @mqwertyarjsudo</b>',
                              parse_mode='HTML')
 
 
